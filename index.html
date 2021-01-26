@@ -20,12 +20,12 @@
         renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-detector id="scene">
 
         <a-assets>
-            <a-asset-item id="tree" src="lowpoly_building/scene.gltf"></a-asset-item>
+            <a-asset-item id="tree" src="upper_body_anatomy/scene.gltf"></a-asset-item>
         </a-assets>
 
         <a-marker type='barcode' value='7' raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="tree-model" gltf-model="#tree" scale='0.2 0.2 0.2' position='0 0.5 0' class="clickable"
+            <a-entity id="tree-model" gltf-model="#tree" scale='1.0 1.0 1.0' position='0 0.5 0' class="clickable"
                 gesture-handler>
             </a-entity>
         </a-marker>
