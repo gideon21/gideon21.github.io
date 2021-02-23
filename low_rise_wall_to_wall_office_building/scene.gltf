@@ -3,24 +3,24 @@
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 3839,
+      "count": 3362,
       "max": [
-        1600.001220703125,
-        1440.0001220703125,
-        2375.69775390625
+        4151.35986328125,
+        3913.57861328125,
+        2921.225830078125
       ],
       "min": [
-        -1600.000244140625,
-        -1697.412841796875,
-        0
+        -2400.000732421875,
+        -1748.42578125,
+        -1.5999755859375
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 46068,
+      "byteOffset": 40344,
       "componentType": 5126,
-      "count": 3839,
+      "count": 3362,
       "max": [
         1,
         1,
@@ -36,10 +36,10 @@
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 3839,
+      "count": 3362,
       "max": [
         1,
-        0.99834609031677246
+        1.7365237474441528
       ],
       "min": [
         0,
@@ -49,11 +49,11 @@
     },
     {
       "bufferView": 1,
-      "byteOffset": 30712,
+      "byteOffset": 26896,
       "componentType": 5126,
-      "count": 3839,
+      "count": 3362,
       "max": [
-        0.97807449102401733,
+        0.9937555193901062,
         0.99900001287460327
       ],
       "min": [
@@ -64,12 +64,12 @@
     },
     {
       "bufferView": 1,
-      "byteOffset": 61424,
+      "byteOffset": 53792,
       "componentType": 5126,
-      "count": 3839,
+      "count": 3362,
       "max": [
         1,
-        0.99834609031677246
+        1.7365237474441528
       ],
       "min": [
         0,
@@ -79,12 +79,12 @@
     },
     {
       "bufferView": 1,
-      "byteOffset": 92136,
+      "byteOffset": 80688,
       "componentType": 5126,
-      "count": 3839,
+      "count": 3362,
       "max": [
         1,
-        0.99834609031677246
+        1.7365237474441528
       ],
       "min": [
         0,
@@ -95,9 +95,9 @@
     {
       "bufferView": 0,
       "componentType": 5125,
-      "count": 6018,
+      "count": 5094,
       "max": [
-        3838
+        3361
       ],
       "min": [
         0
@@ -109,7 +109,7 @@
     "extras": {
       "author": "aitortilla01 (https://sketchfab.com/aitortilla01)",
       "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-      "source": "https://sketchfab.com/3d-models/low-rise-wall-to-wall-office-building-be7583ca46f5411d8921ac85d8c33f3f",
+      "source": "https://sketchfab.com/3d-models/low-rise-wall-to-wall-office-building-6488ad5edd1d454884b3fe030f5f04b1",
       "title": "Low rise wall to wall office building"
     },
     "generator": "Sketchfab-8.76.0",
@@ -118,23 +118,23 @@
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 24072,
+      "byteLength": 20376,
       "byteOffset": 0,
       "name": "floatBufferViews",
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 122848,
-      "byteOffset": 24072,
+      "byteLength": 107584,
+      "byteOffset": 20376,
       "byteStride": 8,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 92136,
-      "byteOffset": 146920,
+      "byteLength": 80688,
+      "byteOffset": 127960,
       "byteStride": 12,
       "name": "floatBufferViews",
       "target": 34962
@@ -142,19 +142,19 @@
   ],
   "buffers": [
     {
-      "byteLength": 239056,
+      "byteLength": 208648,
       "uri": "scene.bin"
     }
   ],
   "images": [
     {
-      "uri": "textures/AIT01W2W3_baseColor.png"
+      "uri": "textures/b_ind_W2W5_t2_l1_baseColor.png"
     }
   ],
   "materials": [
     {
       "doubleSided": true,
-      "name": "AIT01W2W3",
+      "name": "b_ind_W2W5_t2_l1",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
           1,
@@ -173,7 +173,7 @@
   ],
   "meshes": [
     {
-      "name": "AIT01W2W3_AIT01W2W3_0",
+      "name": "Plane001_b_ind_W2W5_t2_l1_0",
       "primitives": [
         {
           "attributes": {
@@ -232,7 +232,7 @@
         0,
         1
       ],
-      "name": "AIT01W2W3.FBX"
+      "name": "AIT01W2W5.FBX"
     },
     {
       "children": [
@@ -257,16 +257,16 @@
         1,
         2.2204460492503131e-16,
         0,
-        0.0003662109375,
-        6.866455078125e-05,
+        0,
+        0,
         0,
         1
       ],
-      "name": "AIT01W2W3"
+      "name": "Plane001"
     },
     {
       "mesh": 0,
-      "name": "AIT01W2W3_AIT01W2W3_0"
+      "name": "Plane001_b_ind_W2W5_t2_l1_0"
     }
   ],
   "samplers": [
