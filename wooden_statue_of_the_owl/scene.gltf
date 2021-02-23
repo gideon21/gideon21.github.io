@@ -1,0 +1,304 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 13174,
+      "max": [
+        3.1850316524505615,
+        8.9105806350708008,
+        3.1122760772705078
+      ],
+      "min": [
+        -3.4778168201446533,
+        -11.190704345703125,
+        -3.2609310150146484
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 158088,
+      "componentType": 5126,
+      "count": 13174,
+      "max": [
+        0.99992716312408447,
+        0.99910318851470947,
+        0.99999159574508667
+      ],
+      "min": [
+        -0.99996519088745117,
+        -0.99998694658279419,
+        -0.99991917610168457
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 13174,
+      "max": [
+        0.99965775012969971,
+        0.9999619722366333,
+        0.99995553493499756,
+        1
+      ],
+      "min": [
+        -0.99985778331756592,
+        -0.99991726875305176,
+        -0.99943733215332031,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 13174,
+      "max": [
+        0.99655181169509888,
+        0.99921447038650513
+      ],
+      "min": [
+        0.00078733963891863823,
+        0.00083134340820834041
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 66708,
+      "max": [
+        13173
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "3dhdscan (https://sketchfab.com/3dhdscan)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/models/4f0a0d80fdd849b5baa5d727988a9042",
+      "title": "Wooden statue of the owl"
+    },
+    "generator": "Sketchfab-3.19.3",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 266832,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 105392,
+      "byteOffset": 266832,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 316176,
+      "byteOffset": 372224,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 210784,
+      "byteOffset": 688400,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 899184,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/drevena_sova_ratibor_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/drevena_sova_ratibor_normal.jpeg"
+    },
+    {
+      "uri": "textures/drevena_sova_ratibor_baseColor.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "drevena_sova_ratibor",
+      "normalTexture": {
+        "index": 1,
+        "scale": 1,
+        "texCoord": 0
+      },
+      "occlusionTexture": {
+        "index": 0,
+        "strength": 1,
+        "texCoord": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 2,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.90842690169999996
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "drevena_sova_ratibor_drevena_sova_ratibor_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "drevena_sova_ratibor.FBX"
+    },
+    {
+      "children": [
+        4
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        5
+      ],
+      "matrix": [
+        0.99660955656477257,
+        -0.082276313503750795,
+        -5.0379714380998887e-18,
+        0,
+        -0.082276313503750712,
+        -0.9966095565647719,
+        4.3711387076934971e-08,
+        0,
+        -3.5964117918465925e-09,
+        -4.3563186091160787e-08,
+        -0.99999999999999933,
+        0,
+        0.81560611724853516,
+        -0.095589637756347656,
+        -0.19678878784179688,
+        1
+      ],
+      "name": "drevena_sova_ratibor"
+    },
+    {
+      "mesh": 0,
+      "name": "drevena_sova_ratibor_drevena_sova_ratibor_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}
+
