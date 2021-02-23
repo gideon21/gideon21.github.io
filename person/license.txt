@@ -1,0 +1,11 @@
+Model Information:
+* title:	Looking Around
+* source:	https://sketchfab.com/3d-models/looking-around-8e86d9a83cbd43a48f8f477cd1826f83
+* author:	TwoTracks (https://sketchfab.com/Alex.Edwards)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Looking Around" (https://sketchfab.com/3d-models/looking-around-8e86d9a83cbd43a48f8f477cd1826f83) by TwoTracks (https://sketchfab.com/Alex.Edwards) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
