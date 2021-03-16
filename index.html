@@ -19,7 +19,7 @@
         arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'
         renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-detector id="scene">
 
-        <a-text text="value: Whatever \n you want !" color="blue"    rotation="-90 0 0"></a-text>
+        
 
         <a-assets>
             <a-asset-item id="body" src="ecorche_-_anatomy_study/scene.gltf"></a-asset-item>
@@ -37,7 +37,7 @@
 
         <a-marker type='barcode' value='3' raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="arm-model" gltf-model="#arm" scale='1 1 1' position='0 0 0' class="clickable"
+            <a-entity id="arm-model" gltf-model="#arm" scale='1 1 1' position='0 0 0' text="value: Whatever \n you want !" color="blue" class="clickable"
                 gesture-handler>
             </a-entity>
         </a-marker>
