@@ -37,7 +37,8 @@
 
         <a-marker type='barcode' value='3' raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="arm-model" gltf-model="#arm" scale='1 1 1' position='0 0 0' text="value: Whatever \n you want !" color="blue" class="clickable"
+            <a-entity id="arm-model" gltf-model="#arm" scale='1 1 1' position='0 0 0' geometry="primitive: plane; width: 4; height: auto"
+            material="color: blue" text="value: Whatever \n you want !" color="#fff" class="clickable"
                 gesture-handler>
             </a-entity>
         </a-marker>
