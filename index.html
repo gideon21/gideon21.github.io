@@ -13,27 +13,11 @@
 <script src="gesture-detector.js"></script>
 <script src="gesture-handler.js"></script>
 
-<script>
-    // With three.js
-el.object3D.rotation.set(
-  THREE.Math.degToRad(15),
-  THREE.Math.degToRad(30),
-  THREE.Math.degToRad(90)
-);
-el.object3D.rotation.x += Math.PI;
-
-// With .setAttribute (less recommended).
-el.setAttribute('rotation', {x: 15, y: 30, z: 90});
-
-</script>
-
 <body style='margin : 0px; overflow: hidden;'>
     <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
     <a-scene embedded
         arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'
         renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-detector id="scene">
-
-        
 
         <a-assets>
             <a-asset-item id="body" src="ecorche_-_anatomy_study/scene.gltf" loading="lazy"></a-asset-item>
@@ -44,7 +28,7 @@ el.setAttribute('rotation', {x: 15, y: 30, z: 90});
 
         <a-marker type='barcode' value='7' raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="body-model" gltf-model="#body" scale='0.1 0.1 0.1' position='0 0 0'  class="clickable"
+            <a-entity id="body-model" gltf-model="#body" scale='0.1 0.1 0.1' position='0 0 0'  rotation="15 45 30"  class="clickable"
                 gesture-handler>
             </a-entity>
         </a-marker>
