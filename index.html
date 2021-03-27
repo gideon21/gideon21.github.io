@@ -14,13 +14,46 @@
 <script src="gesture-handler.js"></script>
 
 <script>
-    document.querySelector('#body').load();
-    document.querySelector('#arm').load();
-    document.querySelector('#heart').load();
-    document.querySelector('#thorax').load();
+    var model = this.el.object3D;
+    var box = new THREE.Box3().setFromObject(model);
+    var size = box.getSize();
+
+    AFRAME.registerComponent('resize', {
+        schema: {
+            axis: {
+                type: 'string',
+                default: 'x'
+            },
+            value: {
+                type: 'number',
+                default: 1
+            }
+        },
+        init: function () {
+            var el = this.el;
+            var data = this.data;
+            var model = el.object3D;
+            el.addEventListener('model-loaded', function (e) {
+                var box = new THREE.Box3().setFromObject(model);
+                var size = box.getSize();
+                var x = size.x;
+                var y = size.y;
+                var z = size.z;
+                if (data.axis === 'x') {
+                    var scale = data.value / x;
+                } else if (data.axis === 'y') {
+                    var scale = data.value / y;
+                } else {
+                    var scale = data.value / z;
+                }
+                el.setAttribute('scale', scale + ' ' + scale + ' ' + scale);
+            });
+        }
+    });
 </script>
 
 <body style='margin : 0px; overflow: hidden;'>
+
     <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
     <a-scene embedded
         arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'
@@ -35,14 +68,14 @@
 
         <a-marker type='barcode' value='7' raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="body-model" gltf-model="#body" scale="0.1 0.1 0.1" position="0 0 0"  class="clickable"
+            <a-entity resize='axis:x; value:0.5' id="body-model" gltf-model="#body" position="0 0 0" class="clickable"
                 gesture-handler>
             </a-entity>
         </a-marker>
 
         <a-marker type='barcode' value='3' raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="arm-model" gltf-model="#arm" scale="0.1 0.1 0.1" position="0 0 0"  class="clickable"
+            <a-entity id="arm-model" gltf-model="#arm" scale="0.1 0.1 0.1" position="0 0 0" class="clickable"
                 gesture-handler>
             </a-entity>
         </a-marker>
@@ -56,13 +89,19 @@
 
         <a-marker type='barcode' value='1' raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="thorax-model" gltf-model="#thorax" scale="0.1 0.1 0.1" position='0 0 0'  class="clickable"
+            <a-entity id="thorax-model" gltf-model="#thorax" scale="0.1 0.1 0.1" position='0 0 0' class="clickable"
                 gesture-handler>
             </a-entity>
         </a-marker>
         <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
         <a-entity camera></a-entity>
     </a-scene>
+    <script>
+        document.querySelector('#body').load();
+        document.querySelector('#arm').load();
+        document.querySelector('#heart').load();
+        document.querySelector('#thorax').load();
+    </script>
 </body>
 
 </html>
