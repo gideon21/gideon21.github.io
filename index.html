@@ -85,7 +85,7 @@
         arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'
         renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-detector id="scene">
 
-        <a-assets timeout="1000">
+        <a-assets loading="lazy">
             <a-asset-item id="body" src="ecorche_-_anatomy_study/scene.gltf"></a-asset-item>
             <a-asset-item id="arm" src="simple_arm_anatomy/scene.gltf"></a-asset-item>
             <a-asset-item id="heart" src="anatomical_heart_-_codominance/scene.gltf"></a-asset-item>
@@ -94,7 +94,7 @@
 
         <a-marker type='barcode' value='7' raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="body-model" natural-size="width:0.80" gltf-model="#body" position="0 0 0" class="clickable"
+            <a-entity id="body-model" natural-size="width:0.90" gltf-model="#body" position="0 0 0" class="clickable"
                 gesture-handler>
             </a-entity>
         </a-marker>
@@ -108,14 +108,14 @@
 
         <a-marker type='barcode' value='2' raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="heart-model" natural-size="width:0.72" gltf-model="#heart"  position="0 0 0" class="clickable"
+            <a-entity id="heart-model" natural-size="width:0.90" gltf-model="#heart"  position="0 0 0" class="clickable"
                 gesture-handler>
             </a-entity>
         </a-marker>
 
         <a-marker type='barcode' value='1' raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="thorax-model" natural-size="width:0.72" gltf-model="#thorax"  position='0 0 0' class="clickable"
+            <a-entity id="thorax-model" natural-size="width:0.90" gltf-model="#thorax"  position='0 0 0' class="clickable"
                 gesture-handler>
             </a-entity>
         </a-marker>
