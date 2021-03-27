@@ -8,73 +8,9 @@
 <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-
-
-
-<script>
-    const AFRAME = window.AFRAME;
-
-    /*
-     * Scales the object proportionally to a set value given in meters.
-     */
-
-    AFRAME.registerComponent('natural-size', {
-        schema: {
-            width: {
-                type: "number",
-                default: undefined // meters
-            },
-            height: {
-                type: "number",
-                default: undefined // meters
-            },
-            depth: {
-                type: "number",
-                default: undefined // meters
-            }
-        },
-
-        init() {
-            this.el.addEventListener('model-loaded', this.rescale.bind(this));
-        },
-
-        update() {
-            this.rescale();
-        },
-
-        rescale() {
-
-            const el = this.el;
-            const data = this.data;
-            const model = el.object3D;
-
-            const box = new THREE.Box3().setFromObject(model);
-            const size = box.getSize();
-
-            if (!size.x && !size.y && !size.z) {
-                return;
-            }
-
-            let scale = 1;
-
-            if (data.width) {
-                scale = data.width / size.x;
-            } else if (data.height) {
-                scale = data.height(size.y);
-            } else if (data.depth) {
-                scale = data.depth / size.y;
-            }
-
-            el.setAttribute('scale', `${scale} ${scale} ${scale}`);
-
-        },
-
-        remove() {
-            this.el.removeEventListener('model-loaded', this.rescale);
-        }
-
-    });
-</script>
+<script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+<script src="gesture-detector.js"></script>
+<script src="gesture-handler.js"></script>
 
 <body style='margin : 0px; overflow: hidden;'>
 
@@ -84,10 +20,10 @@
         renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-detector id="scene">
 
         <a-assets loading="lazy">
-            <a-asset-item id="body" src="ecorche_-_anatomy_study/scene.gltf"></a-asset-item>
-            <a-asset-item id="arm" src="simple_arm_anatomy/scene.gltf"></a-asset-item>
-            <a-asset-item id="heart" src="anatomical_heart_-_codominance/scene.gltf"></a-asset-item>
-            <a-asset-item id="thorax" src="human_anatomy_heart_in_thorax/scene.gltf"></a-asset-item>
+            <a-asset-item id="body" loading="lazy" src="ecorche_-_anatomy_study/scene.gltf"></a-asset-item>
+            <a-asset-item id="arm" loading="lazy" src="simple_arm_anatomy/scene.gltf"></a-asset-item>
+            <a-asset-item id="heart" loading="lazy" src="anatomical_heart_-_codominance/scene.gltf"></a-asset-item>
+            <a-asset-item id="thorax" loading="lazy" src="human_anatomy_heart_in_thorax/scene.gltf"></a-asset-item>
         </a-assets>
 
         <a-marker type='barcode' value='7' raycaster="objects: .clickable" emitevents="true"
@@ -99,7 +35,7 @@
 
         <a-marker type='barcode' value='3' raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="arm-model" natural-size="width:0.95" gltf-model="#arm"  position="0 0 0" class="clickable"
+            <a-entity id="arm-model" gltf-model="#arm"  position="0 0 0" scale="0.5 0.5 0.5" class="clickable"
                 gesture-handler>
             </a-entity>
         </a-marker>
@@ -113,7 +49,7 @@
 
         <a-marker type='barcode' value='1' raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="thorax-model" gltf-model="#thorax"  position='0 0 0' scale="0.005 0.005 0.005" class="clickable"
+            <a-entity id="thorax-model" gltf-model="#thorax"  position='0 0 0' scale="0.007 0.007 0.007" class="clickable"
                 gesture-handler>
             </a-entity>
         </a-marker>
