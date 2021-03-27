@@ -89,12 +89,12 @@
             <a-asset-item id="body" src="ecorche_-_anatomy_study/scene.gltf"></a-asset-item>
             <a-asset-item id="arm" src="simple_arm_anatomy/scene.gltf"></a-asset-item>
             <a-asset-item id="heart" src="anatomical_heart_-_codominance/scene.gltf"></a-asset-item>
-            <a-asset-item id="thorax" src="human_anatomy_heart_in_thorax/scene.gltf"></a-asset-item>
+            <a-asset-item id="thorax" src="human_thorax/scene.gltf"></a-asset-item>
         </a-assets>
 
         <a-marker type='barcode' value='7' raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="body-model" natural-size="width:0.95" gltf-model="#body" position="0 0 0" class="clickable"
+            <a-entity id="body-model" natural-size="width:0.1" gltf-model="#body" position="0 0 0" class="clickable"
                 gesture-handler>
             </a-entity>
         </a-marker>
@@ -108,7 +108,7 @@
 
         <a-marker type='barcode' value='2' raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="heart-model" natural-size="width:1" gltf-model="#heart"  position="0 0 0" class="clickable"
+            <a-entity id="heart-model" natural-size="width:0.1" gltf-model="#heart"  position="0 0 0" class="clickable"
                 gesture-handler>
             </a-entity>
         </a-marker>
