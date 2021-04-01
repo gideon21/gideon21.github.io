@@ -19,42 +19,19 @@
         arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'
         renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-detector id="scene">
 
-        <a-assets loading="lazy">
-            <a-asset-item id="body" loading="lazy" src="ecorche_-_anatomy_study/scene.gltf"></a-asset-item>
-            <a-asset-item id="arm" loading="lazy" src="simple_arm_anatomy/scene.gltf"></a-asset-item>
-            <a-asset-item id="heart" loading="lazy" src="anatomical_heart_-_codominance/scene.gltf"></a-asset-item>
-            <a-asset-item id="thorax" loading="lazy" src="human_anatomy_heart_in_thorax/scene.gltf"></a-asset-item>
+        <a-assets>
+            <a-asset-item id="body" src="ecorche_-_anatomy_study/scene.gltf"></a-asset-item>
         </a-assets>
 
-        <a-marker type='barcode' value='7' raycaster="objects: .clickable" emitevents="true"
+        <a-marker-camera preset='hiro'  raycaster="objects: .clickable" emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;" id="markerA">
             <a-entity id="body-model" gltf-model="#body" position="0 0 0" scale="0.09 0.09 0.09" class="clickable"
                 gesture-handler="minScale: 0.25; maxScale: 10">
             </a-entity>
-        </a-marker>
+        </a-marker-camera>
 
-        <a-marker type='barcode' value='3' raycaster="objects: .clickable" emitevents="true"
-            cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="arm-model" gltf-model="#arm"  position="0 0 0" scale="1 1 1" class="clickable"
-                gesture-handler="minScale: 0.25; maxScale: 10">
-            </a-entity>
-        </a-marker>
-
-        <a-marker type='barcode' value='2' raycaster="objects: .clickable" emitevents="true"
-            cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="heart-model"  gltf-model="#heart"  position="0 0 0" scale="0.009 0.009 0.009" class="clickable"
-                gesture-handler="minScale: 0.25; maxScale: 10">
-            </a-entity>
-        </a-marker>
-
-        <a-marker type='barcode' value='1' raycaster="objects: .clickable" emitevents="true"
-            cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-entity id="thorax-model" gltf-model="#thorax"  position='0 0 0' scale="0.007 0.007 0.007" class="clickable"
-                gesture-handler="minScale: 0.25; maxScale: 10">
-            </a-entity>
-        </a-marker>
         <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
-        <a-entity camera></a-entity>
+
     </a-scene>
     
 </body>
